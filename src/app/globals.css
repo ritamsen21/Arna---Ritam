@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --color-ivory: #faf6ef;
+  --color-cream: #f3ead9;
+  --color-sand: #ede0c8;
+  --color-pearl: #fffdf8;
+  --color-blush: #f3e3de;
+  --color-sage: #b9c4ac;
+  --color-gold: #b3873d;
+  --color-maroon: #6d2130;
+  --color-charcoal: #2c2420;
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-cream: var(--color-cream);
+  --color-sand: var(--color-sand);
+  --color-pearl: var(--color-pearl);
+  --color-blush: var(--color-blush);
+  --color-sage: var(--color-sage);
+  --color-gold: var(--color-gold);
+  --color-maroon: var(--color-maroon);
+  --color-charcoal: var(--color-charcoal);
+  --font-serif: var(--font-serif-raw), "Cormorant Garamond", serif;
+  --font-heading: var(--font-heading-raw), "Baloo Da 2", sans-serif;
+  --font-body: var(--font-body-raw), "Inter", sans-serif;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-pearl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
