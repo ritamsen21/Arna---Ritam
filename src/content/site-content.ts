@@ -49,7 +49,7 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/couple/hero-portrait.jpg",
     alt: "Arna and Ritam in traditional Bengali wedding attire, framed by soft golden light",
-    caption: "Ei poth jodi na shesh hoy",
+    caption: "Where our forever begins",
     aspect: "portrait",
   },
   {
@@ -86,16 +86,16 @@ export const weddingDetails = [
 
 export const blessings = [
   {
-    name: "Maa & Baba",
-    message: "May your togetherness bloom like the lotus — quietly, endlessly.",
+    name: "With Love, Our Families",
+    message: "May your togetherness bloom like the lotus — quietly, endlessly, always turning toward the light.",
   },
   {
-    name: "Didun",
-    message: "Two families become one. May Ma Lokkhi walk beside you always.",
+    name: "With Love, Our Elders",
+    message: "Two families become one today. May every step ahead be blessed and gentle.",
   },
   {
-    name: "Ronojoy Kaku",
-    message: "May your home always smell of ghee, jasmine, and laughter.",
+    name: "With Love, Our Dear Ones",
+    message: "May your home always be full of warmth, jasmine, and quiet laughter.",
   },
 ];
 

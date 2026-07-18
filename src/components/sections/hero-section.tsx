@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { coupleNames, heroContent, weddingDate } from "@/content/site-content";
 import { CountdownDisplay } from "@/components/ui/countdown-display";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
+import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
 
 /**
  * Opening chapter: full-bleed heritage portrait, the couple's names set in
@@ -28,6 +29,7 @@ export function HeroSection() {
           className="object-cover object-top opacity-[0.16]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/90 to-ivory" />
+        <AlponaBackdrop tone="gold" opacity={0.1} />
       </div>
 
       <motion.div

@@ -2,6 +2,7 @@ import { CalendarHeart, MapPin, Shirt } from "lucide-react";
 import { weddingDetails } from "@/content/site-content";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
+import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
 
 const icons = [CalendarHeart, MapPin, Shirt];
 
@@ -16,6 +17,7 @@ export function DetailsSection() {
       aria-label="Wedding Details"
       className="relative w-full bg-blush px-6 py-28 sm:py-36"
     >
+      <AlponaBackdrop tone="maroon" opacity={0.06} />
       <SectionReveal className="mx-auto mb-16 max-w-2xl text-center">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Four</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">

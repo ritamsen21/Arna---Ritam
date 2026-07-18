@@ -2,6 +2,7 @@ import Image from "next/image";
 import { thankYouContent } from "@/content/site-content";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
+import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
 
 /**
  * Closing chapter: a quiet, full-bleed farewell — the last page of the
@@ -23,6 +24,7 @@ export function ThankYouSection() {
           className="object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/85 to-charcoal/60" />
+        <AlponaBackdrop tone="gold" opacity={0.12} />
       </div>
 
       <SectionReveal className="relative z-10 flex max-w-2xl flex-col items-center text-center">

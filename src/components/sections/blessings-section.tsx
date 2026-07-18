@@ -2,6 +2,7 @@ import { Quote } from "lucide-react";
 import { blessings } from "@/content/site-content";
 import { SectionReveal } from "@/components/motion/section-reveal";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
+import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
 
 /**
  * Blessings chapter: a quiet wall of guest wishes, styled like handwritten
@@ -14,6 +15,7 @@ export function BlessingsSection() {
       aria-label="Blessings"
       className="relative w-full bg-sage/25 px-6 py-28 sm:py-36"
     >
+      <AlponaBackdrop tone="gold" opacity={0.07} />
       <SectionReveal className="mx-auto mb-16 max-w-2xl text-center">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Five</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
