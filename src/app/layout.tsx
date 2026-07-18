@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Baloo_Da_2, Inter } from "next/font/google";
 import "./globals.css";
 import { SmoothScrollProvider } from "@/components/providers/smooth-scroll-provider";
 import { MotionProvider } from "@/components/providers/motion-provider";
+import { BackgroundMusic } from "@/components/media/background-music";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-serif-raw",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <MotionProvider>
           <SmoothScrollProvider>{children}</SmoothScrollProvider>
         </MotionProvider>
+        <BackgroundMusic />
       </body>
     </html>
   );

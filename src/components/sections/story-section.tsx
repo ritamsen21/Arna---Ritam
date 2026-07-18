@@ -1,7 +1,8 @@
 import { storyBeats } from "@/content/site-content";
 import { SectionReveal } from "@/components/motion/section-reveal";
-import { ParallaxImage } from "@/components/motion/parallax-image";
+import { PhotoFrame } from "@/components/ui/photo-frame";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
+import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
 
 /**
  * "Our Story" chapter: an editorial split layout, each beat alternating
@@ -12,9 +13,10 @@ export function StorySection() {
     <section
       id="story"
       aria-label="Our Story"
-      className="relative w-full bg-sand px-6 py-28 sm:py-36"
+      className="relative w-full overflow-hidden bg-gradient-to-b from-sand via-blush to-cream px-6 py-28 sm:py-36"
     >
-      <SectionReveal className="mx-auto mb-20 max-w-2xl text-center">
+      <AlponaBackdrop tone="gold" opacity={0.09} />
+      <SectionReveal className="relative mx-auto mb-20 max-w-2xl text-center">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Two</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
           Our Story
@@ -22,7 +24,7 @@ export function StorySection() {
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-20 sm:gap-28">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-20 sm:gap-28">
         {storyBeats.map((beat, index) => {
           const reversed = index % 2 === 1;
           return (
@@ -32,19 +34,16 @@ export function StorySection() {
                 reversed ? "lg:flex-row-reverse" : ""
               }`}
             >
-              <SectionReveal
-                direction="none"
-                className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(58,42,32,0.4)] lg:w-1/2"
-              >
-                <ParallaxImage
+              <SectionReveal direction="none" className="w-full max-w-xs lg:w-2/5">
+                <PhotoFrame
                   src={beat.image}
                   alt={`${beat.title} — a chapter in Arna and Ritam's story`}
-                  className="h-full w-full"
-                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  sizes="(max-width: 1024px) 60vw, 320px"
+                  className="aspect-[4/5] w-full"
                 />
               </SectionReveal>
 
-              <SectionReveal className="w-full max-w-md text-center lg:w-1/2 lg:text-left">
+              <SectionReveal className="w-full max-w-md text-center lg:w-3/5 lg:text-left">
                 <p className="text-xs uppercase tracking-[0.35em] text-gold">{beat.year}</p>
                 <h3 className="mt-4 font-serif text-3xl text-charcoal sm:text-4xl">
                   {beat.title}

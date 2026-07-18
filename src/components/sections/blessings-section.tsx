@@ -13,10 +13,10 @@ export function BlessingsSection() {
     <section
       id="blessings"
       aria-label="Blessings"
-      className="relative w-full bg-sage/25 px-6 py-28 sm:py-36"
+      className="relative w-full overflow-hidden bg-gradient-to-b from-sage/30 via-blush to-sand px-6 py-28 sm:py-36"
     >
-      <AlponaBackdrop tone="gold" opacity={0.07} />
-      <SectionReveal className="mx-auto mb-16 max-w-2xl text-center">
+      <AlponaBackdrop tone="gold" opacity={0.1} />
+      <SectionReveal className="relative mx-auto mb-16 max-w-2xl text-center">
         <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Five</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
           Blessings
@@ -24,7 +24,7 @@ export function BlessingsSection() {
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>
 
-      <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
+      <div className="relative mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
         {blessings.map((blessing, index) => (
           <SectionReveal
             key={blessing.name}

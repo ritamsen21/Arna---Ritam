@@ -1,35 +1,27 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { coupleNames, heroContent, weddingDate } from "@/content/site-content";
 import { CountdownDisplay } from "@/components/ui/countdown-display";
 import { OrnamentalDivider } from "@/components/ui/ornamental-divider";
 import { AlponaBackdrop } from "@/components/decor/alpona-backdrop";
+import { PhotoFrame } from "@/components/ui/photo-frame";
 
 /**
- * Opening chapter: full-bleed heritage portrait, the couple's names set in
- * an editorial serif, and a quiet countdown toward the wedding date.
+ * Opening chapter: a small framed heritage portrait, the couple's names set
+ * in an editorial serif, and a quiet countdown toward the wedding date —
+ * set against a warm, colourful courtyard-inspired backdrop.
  */
 export function HeroSection() {
   return (
     <section
       id="hero"
       aria-label="Opening — Save the Date"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-ivory px-6 py-24"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-cream via-blush to-sand px-6 py-24"
     >
       <div className="absolute inset-0">
-        <Image
-          src="/images/couple/hero-portrait.jpg"
-          alt="Arna and Ritam together, dressed in traditional Bengali wedding attire"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-top opacity-[0.16]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory via-ivory/90 to-ivory" />
-        <AlponaBackdrop tone="gold" opacity={0.1} />
+        <AlponaBackdrop tone="maroon" opacity={0.14} />
       </div>
 
       <motion.div
@@ -38,6 +30,14 @@ export function HeroSection() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 flex max-w-3xl flex-col items-center text-center"
       >
+        <PhotoFrame
+          src="/images/couple/hero-portrait.jpg"
+          alt="Arna and Ritam together, dressed in traditional Bengali wedding attire"
+          priority
+          sizes="(max-width: 640px) 60vw, 280px"
+          className="mb-10 aspect-[3/4] w-40 sm:w-56"
+        />
+
         <p className="mb-6 text-xs uppercase tracking-[0.4em] text-maroon">
           {heroContent.eyebrow}
         </p>
@@ -54,7 +54,7 @@ export function HeroSection() {
           {heroContent.tagline}
         </p>
 
-        <p className="mt-3 text-sm uppercase tracking-[0.35em] text-charcoal/50">
+        <p className="mt-3 text-sm uppercase tracking-[0.35em] text-terracotta">
           {heroContent.saveTheDate}
         </p>
 
