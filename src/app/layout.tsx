@@ -14,7 +14,7 @@ const cormorant = Cormorant_Garamond({
 
 const balooDa2 = Baloo_Da_2({
   variable: "--font-heading-raw",
-  subsets: ["latin"],
+  subsets: ["latin", "bengali"],
   weight: ["500", "600", "700"],
 });
 

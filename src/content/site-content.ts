@@ -24,6 +24,12 @@ export const heroContent = {
   scrollHint: "Begin the story",
 };
 
+export const entryContent = {
+  bengaliGreeting: "শুভ বিবাহ",
+  bengaliSubtitle: "নিমন্ত্রণ",
+  prompt: "Tap to open our invitation",
+};
+
 export const storyBeats = [
   {
     year: "The Beginning",
