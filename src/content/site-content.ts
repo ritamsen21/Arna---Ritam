@@ -18,35 +18,35 @@ export const venue = {
 };
 
 export const heroContent = {
-  eyebrow: "Together with our families",
-  saveTheDate: "Save the Date",
-  tagline: "Two hearts, one Bengali tale of love, unfolding in gold and terracotta.",
-  scrollHint: "Begin the story",
+  eyebrow: "আমাদের পরিবারের আশীর্বাদে",
+  saveTheDate: "তারিখটি মনে রাখবেন",
+  tagline: "দুটি হৃদয়ের মিলন, সোনালি আর টেরাকোটার আবেশে লেখা এক বাঙালি প্রেমের গল্প।",
+  scrollHint: "গল্প শুরু করুন",
 };
 
 export const entryContent = {
   bengaliGreeting: "শুভ বিবাহ",
   bengaliSubtitle: "নিমন্ত্রণ",
-  prompt: "Tap to open our invitation",
+  prompt: "নিমন্ত্রণপত্র খুলতে স্পর্শ করুন",
 };
 
 export const storyBeats = [
   {
-    year: "The Beginning",
-    title: "A Glance, A Pause",
-    text: "Somewhere between ordinary days, a quiet conversation turned into something we never wanted to end.",
+    year: "প্রথম দেখা",
+    title: "এক পলক, এক থমকে থাকা",
+    text: "সাধারণ দিনের ভিড়ে এক নীরব আলাপ কখন যে অনন্ত পথের শুরু হয়ে গেল, টেরই পাইনি।",
     image: "/images/couple/intimate-portrait.jpg",
   },
   {
-    year: "The Journey",
-    title: "Growing Roots",
-    text: "Across seasons and cities, we built a language only we understood — patient, gentle, unhurried.",
+    year: "পথচলা",
+    title: "শিকড়ের মতো গভীর",
+    text: "ঋতু বদলেছে, শহর বদলেছে, তবু আমাদের ভাষা ছিল একটাই — ধীর, কোমল, নিশ্চিন্ত।",
     image: "/images/couple/riverboat-portrait.jpg",
   },
   {
-    year: "The Promise",
-    title: "Forever, Bengali Style",
-    text: "Now, with alpona at our feet and blessings in the air, we begin our forever — surrounded by everyone we love.",
+    year: "অঙ্গীকার",
+    title: "চিরদিন, বাঙালি আভিজাত্যে",
+    text: "পায়ে আলপনা, বাতাসে আশীর্বাদ, প্রিয় মানুষদের উপস্থিতিতে আজ শুরু আমাদের চিরকালের পথ।",
     image: "/images/couple/hero-portrait.jpg",
   },
 ];
@@ -55,59 +55,59 @@ export const galleryImages: GalleryImage[] = [
   {
     src: "/images/couple/hero-portrait.jpg",
     alt: "Arna and Ritam in traditional Bengali wedding attire, framed by soft golden light",
-    caption: "Where our forever begins",
+    caption: "এখানেই শুরু আমাদের চিরদিন",
     aspect: "portrait",
   },
   {
     src: "/images/couple/intimate-portrait.jpg",
     alt: "An intimate close moment between Arna and Ritam",
-    caption: "A quiet moment, just for us",
+    caption: "নির্জন এক মুহূর্ত, শুধু আমাদের",
     aspect: "square",
   },
   {
     src: "/images/couple/riverboat-portrait.jpg",
     alt: "Arna and Ritam on a wooden boat along a Bengal river at dusk",
-    caption: "Home is wherever the river takes us",
+    caption: "নদী যেখানে ডাকে, সেখানেই আমাদের ঠিকানা",
     aspect: "landscape",
   },
 ];
 
 export const weddingDetails = [
   {
-    label: "The Date",
-    value: "11th February 2027",
-    description: "Blessings begin at dawn, celebrations linger till dusk.",
+    label: "তারিখ",
+    value: "১১ ফেব্রুয়ারি ২০২৭",
+    description: "ভোরের আশীর্বাদ থেকে রাতের উল্লাস পর্যন্ত উৎসব চলবে।",
   },
   {
-    label: "The Venue",
+    label: "স্থান",
     value: `${venue.name}, ${venue.locality}`,
-    description: "A courtyard of marble and marigold, awaiting your presence.",
+    description: "মার্বেল আর গাঁদা ফুলের সজ্জায় সাজানো প্রাঙ্গণ আপনার অপেক্ষায়।",
   },
   {
-    label: "The Attire",
-    value: "Traditional Bengali Elegance",
-    description: "Terracotta, ivory, antique gold and muted maroon are always welcome.",
+    label: "পোশাক",
+    value: "ঐতিহ্যবাহী বাঙালি সাজ",
+    description: "টেরাকোটা, আইভরি, অ্যান্টিক গোল্ড ও মৃদু মেরুনের ছোঁয়া স্বাগত।",
   },
 ];
 
 export const blessings = [
   {
-    name: "With Love, Our Families",
-    message: "May your togetherness bloom like the lotus — quietly, endlessly, always turning toward the light.",
+    name: "স্নেহভরা পরিবারের পক্ষ থেকে",
+    message: "তোমাদের একসাথে থাকা পদ্মফুলের মতো প্রস্ফুটিত হোক — নীরব, অনন্ত, আলোর দিকে মুখ তুলে।",
   },
   {
-    name: "With Love, Our Elders",
-    message: "Two families become one today. May every step ahead be blessed and gentle.",
+    name: "আশীর্বাদ রইল বয়োজ্যেষ্ঠদের",
+    message: "আজ দুই পরিবার এক হলো। আগামীর প্রতিটি পদক্ষেপ হোক মঙ্গলময় ও শান্ত।",
   },
   {
-    name: "With Love, Our Dear Ones",
-    message: "May your home always be full of warmth, jasmine, and quiet laughter.",
+    name: "প্রিয়জনদের ভালোবাসা",
+    message: "তোমাদের সংসার ভরে থাকুক উষ্ণতা, জুঁইয়ের গন্ধ আর মৃদু হাসিতে।",
   },
 ];
 
 export const thankYouContent = {
-  title: "With Love & Gratitude",
+  title: "ভালোবাসা ও কৃতজ্ঞতা",
   message:
-    "Thank you for being a part of our story before it has even begun. We cannot wait to celebrate with you.",
+    "আমাদের গল্প শুরু হওয়ার আগেই আপনি পাশে আছেন, এ আমাদের সৌভাগ্য। আপনাদের সঙ্গে এই আনন্দ ভাগ করে নিতে আমরা অধীর।",
   signOff: `${coupleNames.bride} & ${coupleNames.groom}`,
 };

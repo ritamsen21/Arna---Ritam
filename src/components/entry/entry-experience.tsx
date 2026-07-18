@@ -14,9 +14,14 @@ import { EntryGate } from "@/components/entry/entry-gate";
 export function EntryExperience({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOpen = () => {
+    window.dispatchEvent(new Event("wedding:gate-opened"));
+    setIsOpen(true);
+  };
+
   return (
     <>
-      <AnimatePresence>{!isOpen && <EntryGate onOpen={() => setIsOpen(true)} />}</AnimatePresence>
+      <AnimatePresence>{!isOpen && <EntryGate onOpen={handleOpen} />}</AnimatePresence>
       <div
         aria-hidden={!isOpen}
         className={isOpen ? "" : "pointer-events-none h-screen overflow-hidden"}

@@ -17,9 +17,9 @@ export function BlessingsSection() {
     >
       <AlponaBackdrop tone="gold" opacity={0.1} />
       <SectionReveal className="relative mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Five</p>
+        <p className="mb-4 text-xs tracking-[0.4em] text-maroon">অধ্যায় পাঁচ</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
-          Blessings
+          আশীর্বাদ
         </h2>
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>

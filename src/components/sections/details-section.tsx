@@ -19,9 +19,9 @@ export function DetailsSection() {
     >
       <AlponaBackdrop tone="maroon" opacity={0.09} />
       <SectionReveal className="relative mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Four</p>
+        <p className="mb-4 text-xs tracking-[0.4em] text-maroon">অধ্যায় চার</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
-          Wedding Details
+          বিবাহের বিবরণ
         </h2>
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>

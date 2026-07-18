@@ -17,9 +17,9 @@ export function StorySection() {
     >
       <AlponaBackdrop tone="gold" opacity={0.09} />
       <SectionReveal className="relative mx-auto mb-20 max-w-2xl text-center">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Two</p>
+        <p className="mb-4 text-xs tracking-[0.4em] text-maroon">অধ্যায় দুই</p>
         <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">
-          Our Story
+          আমাদের গল্প
         </h2>
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>

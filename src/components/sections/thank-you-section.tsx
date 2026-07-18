@@ -28,7 +28,7 @@ export function ThankYouSection() {
       </div>
 
       <SectionReveal className="relative z-10 flex max-w-2xl flex-col items-center text-center">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-gold">Chapter Six</p>
+        <p className="mb-4 text-xs tracking-[0.4em] text-gold">অধ্যায় ছয়</p>
         <h2 className="font-serif text-4xl text-pearl sm:text-6xl">{thankYouContent.title}</h2>
         <OrnamentalDivider className="my-8" />
         <p className="text-balance font-body text-lg leading-relaxed text-pearl/75">

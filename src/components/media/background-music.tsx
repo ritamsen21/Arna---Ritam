@@ -41,8 +41,23 @@ declare global {
 export function BackgroundMusic() {
   const mountRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
-  const [isReady, setIsReady] = useState(false);
+  const isReadyRef = useRef(false);
+  const autoPlayRequestedRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const startPlayback = () => {
+    const player = playerRef.current;
+    if (!player || !isReadyRef.current) {
+      autoPlayRequestedRef.current = true;
+      return;
+    }
+
+    player.unMute();
+    player.setVolume(55);
+    player.playVideo();
+    setIsPlaying(true);
+    autoPlayRequestedRef.current = false;
+  };
 
   useEffect(() => {
     function createPlayer() {
@@ -60,7 +75,12 @@ export function BackgroundMusic() {
           playsinline: 1,
         },
         events: {
-          onReady: () => setIsReady(true),
+          onReady: () => {
+            isReadyRef.current = true;
+            if (autoPlayRequestedRef.current) {
+              startPlayback();
+            }
+          },
         },
       });
     }
@@ -88,9 +108,18 @@ export function BackgroundMusic() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleGateOpen = () => {
+      startPlayback();
+    };
+
+    window.addEventListener("wedding:gate-opened", handleGateOpen);
+    return () => window.removeEventListener("wedding:gate-opened", handleGateOpen);
+  }, []);
+
   const toggleMusic = () => {
     const player = playerRef.current;
-    if (!player || !isReady) return;
+    if (!player || !isReadyRef.current) return;
 
     if (isPlaying) {
       player.pauseVideo();
@@ -98,10 +127,7 @@ export function BackgroundMusic() {
       return;
     }
 
-    player.unMute();
-    player.setVolume(55);
-    player.playVideo();
-    setIsPlaying(true);
+    startPlayback();
   };
 
   return (

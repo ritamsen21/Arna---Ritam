@@ -18,8 +18,8 @@ export function GallerySection() {
     >
       <AlponaBackdrop tone="maroon" opacity={0.08} />
       <SectionReveal className="relative mx-auto mb-16 max-w-2xl text-center">
-        <p className="mb-4 text-xs uppercase tracking-[0.4em] text-maroon">Chapter Three</p>
-        <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">Gallery</h2>
+        <p className="mb-4 text-xs tracking-[0.4em] text-maroon">অধ্যায় তিন</p>
+        <h2 className="font-heading text-4xl font-semibold text-charcoal sm:text-5xl">ছবির অ্যালবাম</h2>
         <OrnamentalDivider className="mt-6" />
       </SectionReveal>
 

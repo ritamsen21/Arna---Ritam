@@ -3,10 +3,10 @@
 import { useCountdown } from "@/hooks/use-countdown";
 
 const units: Array<{ key: "days" | "hours" | "minutes" | "seconds"; label: string }> = [
-  { key: "days", label: "Days" },
-  { key: "hours", label: "Hours" },
-  { key: "minutes", label: "Minutes" },
-  { key: "seconds", label: "Seconds" },
+  { key: "days", label: "দিন" },
+  { key: "hours", label: "ঘণ্টা" },
+  { key: "minutes", label: "মিনিট" },
+  { key: "seconds", label: "সেকেন্ড" },
 ];
 
 /**
@@ -21,7 +21,7 @@ export function CountdownDisplay({ target }: { target: Date }) {
       className="flex items-center justify-center gap-6 sm:gap-10"
       role="timer"
       aria-live="polite"
-      aria-label="Countdown to the wedding day"
+      aria-label="বিবাহের দিন পর্যন্ত কাউন্টডাউন"
     >
       {units.map((unit) => (
         <div key={unit.key} className="flex flex-col items-center">

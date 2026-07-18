@@ -28,8 +28,28 @@ export function EntryGate({ onOpen }: EntryGateProps) {
       <LeatherTexture />
       <AlponaBackdrop tone="gold" opacity={0.12} className="mix-blend-soft-light" />
 
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-16 top-20 h-48 w-48 rounded-full bg-gold/15 blur-3xl"
+        animate={{ x: [0, 24, 0], y: [0, 10, 0], opacity: [0.45, 0.7, 0.45] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 bottom-16 h-56 w-56 rounded-full bg-terracotta/20 blur-3xl"
+        animate={{ x: [0, -26, 0], y: [0, -14, 0], opacity: [0.35, 0.65, 0.35] }}
+        transition={{ duration: 9.5, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <div className="absolute inset-4 border border-gold/40 sm:inset-8" aria-hidden="true" />
       <div className="absolute inset-6 border border-gold/20 sm:inset-10" aria-hidden="true" />
+
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-8 border border-gold/15 sm:inset-14"
+        animate={{ rotate: [0, 0.35, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+      />
 
       <motion.div
         initial={{ opacity: 0, y: 12 }}
@@ -37,13 +57,17 @@ export function EntryGate({ onOpen }: EntryGateProps) {
         transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }}
         className="relative z-10 flex flex-col items-center px-6 text-center"
       >
-        <span className="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-gold/60 sm:h-20 sm:w-20">
+        <motion.span
+          className="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-gold/60 sm:h-20 sm:w-20"
+          animate={{ scale: [1, 1.035, 1], boxShadow: ["0 0 0px rgba(179,135,61,0.0)", "0 0 26px rgba(179,135,61,0.33)", "0 0 0px rgba(179,135,61,0.0)"] }}
+          transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+        >
           <span className="font-heading text-2xl text-gold sm:text-3xl">
             {coupleNames.bride.charAt(0)}
             <span className="mx-0.5 text-gold/70">&amp;</span>
             {coupleNames.groom.charAt(0)}
           </span>
-        </span>
+        </motion.span>
 
         <p className="font-heading text-3xl text-gold sm:text-4xl">
           {entryContent.bengaliGreeting}
